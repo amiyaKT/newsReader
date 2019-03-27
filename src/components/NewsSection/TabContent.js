@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchComments } from '../../actions';
 
 import Comment from '../CommentSection/Comment';
 
@@ -8,9 +6,6 @@ class TabContent extends Component {
   state = {
     showMore: false
   };
-  componentDidMount() {
-    this.props.fetchComments(this.props.item.objectID);
-  }
 
   render() {
     const ID = this.props.idval;
@@ -35,6 +30,7 @@ class TabContent extends Component {
             <iframe
               className="embed-responsive-item"
               src={this.props.item.url}
+              title={this.props.item.objectID}
               allowFullScreen
             />
           </div>
@@ -47,12 +43,10 @@ class TabContent extends Component {
           </button>
         )}
 
-        {this.props.comments && this.props.item.num_comments > 0 ? (
+        {this.props.item.num_comments > 0 ? (
           <div className="mt-3">
             <h2>Comments Section:</h2>
-            {this.props.comments.map(comment => (
-              <Comment key={comment.created_at_i} comment={comment} />
-            ))}
+            <Comment objectID={this.props.item.objectID} />
           </div>
         ) : null}
       </div>
@@ -60,11 +54,4 @@ class TabContent extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  comments: state.comments
-});
-
-export default connect(
-  mapStateToProps,
-  { fetchComments }
-)(TabContent);
+export default TabContent;

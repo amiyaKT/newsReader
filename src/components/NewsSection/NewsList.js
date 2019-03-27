@@ -61,7 +61,12 @@ class NewsList extends Component {
             />
           ))
         ) : (
-          <div className="text-center">Loading</div>
+          <div className="w-100 d-flex justify-content-center">
+            <div className="lds-ripple">
+              <div />
+              <div />
+            </div>
+          </div>
         )}
       </div>
     );
