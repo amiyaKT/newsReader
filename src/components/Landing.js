@@ -7,14 +7,14 @@ class Landing extends Component {
     return (
       <>
         <div className="row">
-          <div className="text-center w-100">
-            <h1 className="display-3">News Section</h1>
+          <div className="col-md-12 text-center w-100">
+            <h1 className="display-4">News Section</h1>
             <p className="lead">Select News To View</p>
             <hr />
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12 d-flex justify-content-center">
             <NewsList />
           </div>
         </div>

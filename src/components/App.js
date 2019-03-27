@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Header />
-        <div className="container">
+        <div className="container w-100">
           <Route exact path="/" component={Landing} />
           <Route
             exact
