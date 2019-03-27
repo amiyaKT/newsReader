@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchNews } from '../actions';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import Header from './Header';
+import Landing from './Landing';
+import ShowSelectedNews from './NewsSection/ShowSelectedNews';
 
 class App extends Component {
-  componentDidMount() {
-    this.props.fetchNews();
-  }
   render() {
-    return <div className="App">App</div>;
+    return (
+      <BrowserRouter>
+        <Header />
+        <div className="container">
+          <Route exact path="/" component={Landing} />
+          <Route
+            exact
+            path="/selectedList"
+            render={props => <ShowSelectedNews {...props} isAuthed={true} />}
+          />
+        </div>
+      </BrowserRouter>
+    );
   }
 }
 
-export default connect(
-  null,
-  { fetchNews }
-)(App);
+export default App;
