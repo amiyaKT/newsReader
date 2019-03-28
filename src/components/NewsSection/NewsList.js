@@ -50,7 +50,11 @@ class NewsList extends Component {
           >
             Show Selected List
           </Link>
-        ) : null}
+        ) : (
+          <p className="btn btn=white mx-auto d-block mb-3">
+            Select Stories to View Them
+          </p>
+        )}
 
         {this.props.news ? (
           this.props.news.map(news => (

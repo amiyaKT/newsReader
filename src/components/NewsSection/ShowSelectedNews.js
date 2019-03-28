@@ -21,7 +21,9 @@ class ShowSelectedNews extends Component {
       const selectedList = this.props.location.state.selectedList;
       return (
         <div className="row w-100">
+          {/* Shows the list of titles which user has selected */}
           <div className="col-sm-3">
+            <h3>Select Title To View</h3>
             <div
               className="nav flex-column nav-pills"
               id="v-pills-tab"
@@ -49,8 +51,10 @@ class ShowSelectedNews extends Component {
                 );
               })}
             </div>
+            <hr className="d-md-none" />
           </div>
           <div className="col-sm-8">
+            {/* Shows content of the selected title */}
             <div className="tab-content" id="v-pills-tabContent">
               {selectedList.map((item, i) => {
                 let classNames;
