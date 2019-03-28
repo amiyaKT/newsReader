@@ -20,8 +20,8 @@ class ShowSelectedNews extends Component {
       // If  news are selected then display them
       const selectedList = this.props.location.state.selectedList;
       return (
-        <div className="row">
-          <div className="col-3">
+        <div className="row w-100">
+          <div className="col-sm-3">
             <div
               className="nav flex-column nav-pills"
               id="v-pills-tab"
@@ -50,7 +50,7 @@ class ShowSelectedNews extends Component {
               })}
             </div>
           </div>
-          <div className="col-8">
+          <div className="col-sm-8">
             <div className="tab-content" id="v-pills-tabContent">
               {selectedList.map((item, i) => {
                 let classNames;
