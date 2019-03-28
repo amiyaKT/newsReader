@@ -6,10 +6,11 @@ export default class NewsField extends Component {
     const selected = this.props.selected;
     let className;
     if (selected) {
-      className = 'card mb-3 border-success';
+      className = "card mb-3 border-success";
     } else {
-      className = 'card mb-3';
+      className = "card mb-3";
     }
+
     return (
       <div className={className} onClick={this.props.onHandleClick}>
         <div className="card-body">

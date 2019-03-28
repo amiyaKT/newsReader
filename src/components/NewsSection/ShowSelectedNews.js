@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+// import Components
 import Navpills from './Navpills';
 import TabContent from './TabContent';
 
 class ShowSelectedNews extends Component {
   render() {
     if (this.props.location.state === undefined) {
+      // If no news are selected then return to newsList
       return (
         <div className="w-100 d-flex justify-content-center">
           <Link to="/" className="btn btn-primary mx-auto">
@@ -15,6 +17,7 @@ class ShowSelectedNews extends Component {
         </div>
       );
     } else {
+      // If  news are selected then display them
       const selectedList = this.props.location.state.selectedList;
       return (
         <div className="row">

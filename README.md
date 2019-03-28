@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# news-reader-react
 
-## Available Scripts
+A news reader app made using ReactJS and Redux.
 
-In the project directory, you can run:
+### Live here: https://news-reader-selection.netlify.com/
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- When the app Opens user is shown a list of all the top stories along with their titles, total number of comments, date on which the story was posted and author name.
+- All the news items in the news list are individual selectable elements on which the user can click and select or unselect the story element. Selected story element will have a green border.
+- After selecting a list of news, the user can click on 'Show Selected List' button and start a reading session witht the selected stories.
+- The reading session screen consists of a sidebar with a list of selected story titles and highlights the current one.
+- User can navigate within the selected news by clicking on the titles in the sidebar.
+- Each highlighted story shows title, author name, date on which the news was posted and a read more button. Upon clicking the read more button an iframe with the story link loads.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+_Node.JS and npm must be installed. Download and install them from [here](https://nodejs.org)._
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installing
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Follow these steps to run this project in your local computer.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ git clone https://github.com/amiya-1998/newsReader.git
+$ cd newsReader
+$ npm i
+```
 
-### `npm run eject`
+Now, to run the project on port `3000`, run:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+$ npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app should automatically open up on the browser else go to `http://localhost:3000` in your browser to view the app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Built With
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [React.JS](https://reactjs.org/) - Frontend library used in the project.
+- [Redux](https://redux.js.org/) - Used in addition to React.JS for state management.
+- [HN search API](https://hn.algolia.com/api) - Used for fetching news along with comments to that news.
 
-## Learn More
+## Authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **Amiya Kumar Tripathy** - [amiya-1998](https://github.com/amiya-1998)

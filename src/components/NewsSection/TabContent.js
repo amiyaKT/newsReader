@@ -10,7 +10,9 @@ class TabContent extends Component {
   render() {
     const ID = this.props.idval;
     const ariaLabelledBy = `${this.props.idval}-tab`;
+
     return (
+      // News Section
       <div
         className={this.props.classNames}
         id={ID}
@@ -24,25 +26,28 @@ class TabContent extends Component {
             {new Date(this.props.item.created_at).toLocaleDateString()}
           </p>
           <p className="lead">By, {this.props.item.author}</p>
+          {this.state.showMore ? (
+            // display iframe
+            <div className="embed-responsive embed-responsive-16by9">
+              <iframe
+                className="embed-responsive-item"
+                src={this.props.item.url}
+                title={this.props.item.objectID}
+                allowFullScreen
+              />
+            </div>
+          ) : (
+            // Display button which shows iframe
+            <button
+              className="btn btn-primary"
+              onClick={() => this.setState({ showMore: true })}
+            >
+              Read More
+            </button>
+          )}
         </div>
-        {this.state.showMore ? (
-          <div className="embed-responsive embed-responsive-16by9">
-            <iframe
-              className="embed-responsive-item"
-              src={this.props.item.url}
-              title={this.props.item.objectID}
-              allowFullScreen
-            />
-          </div>
-        ) : (
-          <button
-            className="btn btn-primary"
-            onClick={() => this.setState({ showMore: true })}
-          >
-            Read More
-          </button>
-        )}
 
+        {/* Comments section */}
         {this.props.item.num_comments > 0 ? (
           <div className="mt-3">
             <h2>Comments Section:</h2>

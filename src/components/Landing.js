@@ -15,6 +15,7 @@ class Landing extends Component {
         </div>
         <div className="row">
           <div className="col-md-12 d-flex justify-content-center">
+            {/* Display a list of news */}
             <NewsList />
           </div>
         </div>
