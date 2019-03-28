@@ -52,7 +52,7 @@ class NewsList extends Component {
           </Link>
         ) : (
           <p className="btn btn=white mx-auto d-block mb-3">
-            Select Stories to View Them
+            No Stories Selected
           </p>
         )}
 
