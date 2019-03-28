@@ -1,4 +1,4 @@
-# news-reader-react
+# newsReader
 
 A news reader app made using ReactJS and Redux.
 
@@ -45,6 +45,6 @@ The app should automatically open up on the browser else go to `http://localhost
 - [Redux](https://redux.js.org/) - Used in addition to React.JS for state management.
 - [HN search API](https://hn.algolia.com/api) - Used for fetching news along with comments to that news.
 
-## Authors
+## Author
 
 - **Amiya Kumar Tripathy** - [amiya-1998](https://github.com/amiya-1998)
